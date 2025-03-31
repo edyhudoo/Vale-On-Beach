@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Val's Magical Beach Walk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #87CEEB, #1E90FF);
+      height: 100vh;
+      position: relative;
+    }
+    
+    .sand {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 30%;
+      background: #F5DEB3;
+    }
+    
+    .girl {
+      position: absolute;
+      bottom: 20%;
+      left: -200px;
+      height: 100px;
+      animation: walk 20s linear infinite;
+    }
+    
+    .palm {
+      position: absolute;
+      bottom: 20%;
+      height: 550px;
+      animation: sway 4s ease-in-out infinite alternate;
+    }
+    .palm1 { right: 10%; }
+    .palm2 { right: 30%; }
+    
+    .roses {
+      position: absolute;
+      bottom: 35%;
+      left: 50%;
+      height: 60px;
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    .wave {
+      position: absolute;
+      bottom: 30%;
+      width: 100%;
+      height: 60px;
+      background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 60" xmlns="http://www.w3.org/2000/svg"><path d="M0,40 C150,60 350,10 600,30 C850,50 1050,5 1200,25 L1200,60 L0,60 Z" fill="rgba(255,255,255,0.3)"/></svg>');
+      animation: wave 8s linear infinite;
+    }
+    
+    @keyframes walk {
+      to { transform: translateX(150vw); }
+    }
+    @keyframes sway {
+      from { transform: rotate(-3deg); }
+      to { transform: rotate(3deg); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-5deg); }
+      50% { transform: translateY(-15px) rotate(5deg); }
+    }
+    @keyframes wave {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    @media (max-width: 393px) and (max-height: 852px) {
+      .sand { height: 20%; }
+      .girl { height: 70px; animation-duration: 12s; bottom: 15%; }
+      .palm { height: 300px; bottom: 15%; }
+      .roses { height: 30px; bottom: 30%; }
+      .wave { height: 50px; bottom: 25%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="sand"></div>
+  <img class="girl" src="https://i.postimg.cc/ncTBdRXW/Flux-Dev-Create-a-cinematic-anim.jpg" alt="Val walking">
+  
+  <img class="palm palm1" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 300'><path d='M50,300 L50,100' stroke='%236B8E23' stroke-width='8'/><path d='M50,100 Q30,40 10,80 Q-10,120 20,130 Q50,140 70,100 Q90,60 60,30 Q30,0 50,-30 Q70,0 90,30 Q120,60 100,100 Q80,140 50,100 Z' fill='%23228B22'/></svg>">
+  <img class="palm palm2" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 300'><path d='M50,300 L50,100' stroke='%236B8E23' stroke-width='8'/><path d='M50,100 Q70,40 90,80 Q110,120 80,130 Q50,140 30,100 Q10,60 40,30 Q70,0 50,-30 Q30,0 10,30 Q-20,60 0,100 Q20,140 50,100 Z' fill='%23228B22'/></svg>">
+  
+  <img class="roses" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='30' fill='%23FF69B4'/><circle cx='30' cy='40' r='12' fill='%23FF1493'/><circle cx='70' cy='40' r='12' fill='%23FF1493'/></svg>">
+  
+  <div class="wave"></div>
+  
+  <audio autoplay loop>
+    <source src="https://assets.mixkit.co/sfx/preview/mixkit-waves-coming-to-the-beach-5016.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>
